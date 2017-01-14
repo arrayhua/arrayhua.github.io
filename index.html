@@ -1,1 +1,113 @@
-master index.html
+<!DOCTYPE html>
+<html class="" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="arrayhua">
+    <meta name="description"
+          content="一腔热血的激情&一夜失眠的苦想=一段代码的执着 PHP/JavaScript / JAVA / MongoDB / MySQL / Redis / AngularJS / jQuery / HTML。">
+    <title>PHP[ arrayhua ]</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link media="all" href="css/index.css" type="text/css" rel="stylesheet">
+</head>
+<body class="vegas-container">
+<div class="vegas-timer vegas-timer-running">
+    <div class="vegas-timer-progress" style="transition-duration: 4900ms;"></div>
+</div>
+<div class="random-center hide-area">
+    <div id="random-index">
+        <div class="center-field">
+            <img class="avatar" src="image/default_avatar.jpg" width="120" height="120">
+        </div>
+        <div class="center-field">
+            <div class="title">arrayhua</div>
+            <div class="sub-title">一腔热血的激情&一夜失眠的苦想=一段代码的执着</div>
+        </div>
+        <hr>
+        <div class="center-field">
+            <ul class="index-nav-link">
+                <li><a href="https://arrayhua.github.io/">首页</a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href="http://blog.csdn.net/u011337280?viewmode=contents">博客</a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href="https://arrayhua.github.io/resume.html">简历</a></li>
+            </ul>
+            <ul class="social-icon">
+                <li style="margin-right: 40px;">
+                    qq：2498168786
+                </li>
+                <li>
+                    微信：2498168786
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="btn-view">Hide</div>
+<script src="js/hm.js"></script>
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/vegas.min.js"></script>
+<script src="js/random.js"></script>
+<script src="js/highlight.pack.js"></script>
+<script src="js/jquery.mousewheel.pack.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.fancybox-thumbs.js"></script>
+<script src="js/plyr.js"></script>
+<script>
+    // fancybox
+    var backgroundImages = [];
+
+    $('#post').each(function (i) {
+        $(this).find('img').each(function () {
+            if ($(this).parent().hasClass('fancybox') || $(this).parent().hasClass('fancybox-thumb')) return;
+            var alt = this.alt || this.title;
+            if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+            $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+        });
+        $(this).find('.fancybox').each(function () {
+            $(this).attr('rel', 'post' + i);
+        });
+    });
+    $(".fancybox").fancybox();
+
+    var vegasConfig = {
+        "preload­Image": true,
+        "transition": ["slideLeft2", "slideRight2", "flash2"],
+        "timer": true,
+        "delay": 5000,
+        "shuffle": true,
+        "count": 28
+    };
+    var unsplashConfig = {"gravity": "north"};
+    // is show background images
+    var turnoffBackgroundImage = false;
+
+
+    var backgroundColor = "34495E";
+
+    $(".fancybox-thumb").fancybox({
+        prevEffect: 'none',
+        nextEffect: 'none',
+        helpers: {
+            title: {
+                type: 'outside'
+            },
+            thumbs: {
+                width: 50,
+                height: 50
+            }
+        }
+    });
+
+
+</script>
+
+
+</body>
+</html>
