@@ -2,8 +2,11 @@ body { background-color: rgb(52, 73, 94); margin: 0px; font-family: Lato,"Micros
 a { text-decoration: none; color: rgb(58, 83, 155); }
 a:hover { text-decoration: underline; }
 #menu-outer, #bottom-outer, #random-index { opacity: 0.85; }
-.random-center { position: absolute; top: 50%; left: 50%; margin-top: -200px; width: 960px; margin-left: -480px; }
-#random-index { margin: 20px; padding-bottom: 20px; text-align: center; border-radius: 10px; background-color: rgb(236, 240, 241); }
+.random-center{position:absolute;top:50%;left:50%;width:60vw;transform:translate(-50%,-50%)}
+@media (max-width:600px){.random-center{width:100vw}}
+@media (min-width:601px) and (max-width:1024px){.random-center{width:70vw}}
+@media (min-width:1025px){.random-center{width:50vw}}
+#random-index { text-align: center; border-radius: 10px; background-color: rgb(236, 240, 241); }
 #random-index a { text-transform: uppercase; padding: 5px; }
 #random-index .title { font-size: 28px; font-weight: 900; padding-bottom: 5px; cursor: pointer; }
 .sub-title { cursor: pointer; padding-bottom: 10px; }
@@ -28,7 +31,6 @@ a:hover { text-decoration: underline; }
 .weibo:hover { color: rgb(250, 125, 60); }
 .github:hover { color: rgb(64, 120, 192); }
 .coding:hover { color: rgb(0, 0, 0); }
-
 .vegas-overlay, .vegas-slide, .vegas-slide-inner, .vegas-timer, .vegas-wrapper { position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; overflow: hidden; border: medium none; padding: 0px; margin: 0px; }
 .vegas-timer { top: auto; bottom: 0px; height: 2px; }
 .vegas-timer-progress { width: 0px; height: 100%; background: rgb(255, 255, 255) none repeat scroll 0% 0%; transition: width 0s ease-out 0s; }
@@ -40,8 +42,6 @@ body.vegas-container > .vegas-overlay, body.vegas-container > .vegas-slide, body
 .vegas-transition-slideLeft-in, .vegas-transition-slideLeft2-in { transform: translateX(0px); }
 .vegas-transition-slideLeft2-out, .vegas-transition-slideRight, .vegas-transition-slideRight2 { transform: translateX(-100%); }
 .vegas-transition-slideRight-in, .vegas-transition-slideRight2-in { transform: translateX(0px); }
-
-
 @media not all, only screen and (min--moz-device-pixel-ratio: 1.5), not all {
 }
 
